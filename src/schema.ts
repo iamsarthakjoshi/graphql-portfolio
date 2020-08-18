@@ -18,5 +18,10 @@ export const schema = makeSchema({
         typeMatch: (type) => new RegExp(`${type}Interface`),
       },
     ],
+    backingTypeMap: {
+      Date: 'Date',
+      URL: 'URL',
+    },
+    debug: process.env.NODE_ENV === 'development',
   },
 });
