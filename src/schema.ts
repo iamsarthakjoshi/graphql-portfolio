@@ -2,7 +2,6 @@ import { makeSchema } from '@nexus/schema';
 import path from 'path';
 import * as types from 'src/allTypes';
 
-console.log('test');
 export const schema = makeSchema({
   types,
   shouldGenerateArtifacts: process.env.NODE_ENV === 'development',
