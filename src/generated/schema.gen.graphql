@@ -22,6 +22,7 @@ type Position {
   company: String!
   endDate: Date
   id: ID!
+  location: String!
   months: Int!
   startDate: Date!
   title: String!
@@ -29,8 +30,13 @@ type Position {
 }
 
 type Query {
+  """My Bio."""
   bio: Bio!
+
+  """Find a position by ID."""
   position(id: ID): Position
+
+  """List of Positions."""
   positions: [Position!]!
 }
 
